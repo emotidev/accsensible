@@ -1,4 +1,4 @@
-## [0.2.1](https://github.com/krshkun/accsensible/compare/v0.2.0...v0.2.1) (2022-12-17)
+## [0.2.2](https://github.com/krshkun/accsensible/compare/v0.2.0...v0.2.2) (2022-12-17)
 
 
 ### Bug Fixes
