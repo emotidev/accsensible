@@ -1,6 +1,8 @@
 import { Analyzer, UserConfig, AnalyzerResult, CreateAnalyzerOptions } from 'hint'
 import { NextApiRequest, NextApiResponse } from 'next'
 
+import config from '@hint/configuration-accessibility'
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { url } = req.query
 
@@ -10,8 +12,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (typeof url !== 'string') throw new Error('URL is not a string')
 
     const userConfig: UserConfig = {
-      extends: ['accessibility'],
-      formatters: ['json']
+      ...config,
+      connector: 'jsdom'
     }
 
     const options: CreateAnalyzerOptions = {
