@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/krshkun/accsensible/compare/v0.2.0...v0.2.1) (2022-12-17)
+
+
+### Bug Fixes
+
+* config resource not found ([6f7a2c8](https://github.com/krshkun/accsensible/commit/6f7a2c8544281902daf5a06f5e4f006d190ed452))
+
+
+
 # [0.2.0](https://github.com/krshkun/accsensible/compare/v0.1.0...v0.2.0) (2022-12-17)
 
 
