@@ -10,7 +10,6 @@ module.exports = withPlugins([withMDX], ({
   typescript: { tsconfigPath: './tsconfig.json' },
   trailingSlash: false,
   env: {},
-  distDir: 'dist',
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   compress: true,
   poweredByHeader: false,

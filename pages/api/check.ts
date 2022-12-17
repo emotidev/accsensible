@@ -1,7 +1,15 @@
 import { Analyzer, UserConfig, AnalyzerResult, CreateAnalyzerOptions } from 'hint'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import config from '@hint/configuration-accessibility'
+const userConfig: UserConfig = {
+  extends: ['accessibility'],
+  connector: 'jsdom'
+}
+
+const options: CreateAnalyzerOptions = {
+  formatters: ['json']
+}
+const webhint = Analyzer.create(userConfig, options)
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { url } = req.query
@@ -10,17 +18,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     if (typeof url !== 'string') throw new Error('URL is not a string')
-
-    const userConfig: UserConfig = {
-      ...config,
-      connector: 'jsdom'
-    }
-
-    const options: CreateAnalyzerOptions = {
-      formatters: ['json']
-    }
-    const webhint = Analyzer.create(userConfig, options)
-
     const results: AnalyzerResult[] = await webhint.analyze(url, {
       language: 'en'
     })
