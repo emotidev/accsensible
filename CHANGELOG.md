@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/krshkun/accsensible/compare/v0.2.2...v0.2.3) (2022-12-17)
+
+
+### Bug Fixes
+
+* remove unnecessary dependencies ([f6c187c](https://github.com/krshkun/accsensible/commit/f6c187c4215c8ecafa651917b6f6f67b09cb6510))
+
+
+
 ## [0.2.2](https://github.com/krshkun/accsensible/compare/v0.2.0...v0.2.2) (2022-12-17)
 
 
