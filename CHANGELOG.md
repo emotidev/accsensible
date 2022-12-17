@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/krshkun/accsensible/compare/v0.2.3...v0.2.4) (2022-12-17)
+
+
+### Bug Fixes
+
+* use default nextjs vercel config ([bfd6e0f](https://github.com/krshkun/accsensible/commit/bfd6e0fd5d87fe5a1ac0699107881659d6502ec6))
+
+
+
 ## [0.2.3](https://github.com/krshkun/accsensible/compare/v0.2.2...v0.2.3) (2022-12-17)
 
 
