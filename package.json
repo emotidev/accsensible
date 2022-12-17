@@ -10,6 +10,9 @@
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
     "@hint/configuration-accessibility": "^2.0.24",
+    "@hint/connector-jsdom": "^4.1.24",
+    "@hint/formatter-json": "^3.1.33",
+    "@hint/hint-axe": "^4.4.17",
     "@mantine/carousel": "^5.9.4",
     "@mantine/core": "^5.9.4",
     "@mantine/form": "^5.9.4",
@@ -55,5 +58,5 @@
     "ts-node": "^10.9.1",
     "typescript": "4.9.4"
   },
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
