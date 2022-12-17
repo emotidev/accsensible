@@ -9,6 +9,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
+    "@hint/configuration-accessibility": "^2.0.24",
+    "@hint/connector-jsdom": "^4.1.24",
+    "@hint/formatter-json": "^3.1.33",
+    "@hint/hint-axe": "^4.4.17",
     "@mantine/core": "^5.9.4",
     "@mantine/hooks": "^5.9.4",
     "@mantine/next": "^5.9.4",
