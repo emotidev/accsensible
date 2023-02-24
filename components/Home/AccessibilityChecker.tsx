@@ -6,7 +6,7 @@ import { useState } from 'react'
 import AccessibilityResults from './AccessibilityResults'
 import axe from 'axe-core'
 
-export default function AccessibilityChecker() {
+export default function AccessibilityChecker () {
   const [inputValue, setInputValue] = useState<string>('')
   const [results, setResults] = useState<axe.AxeResults | any>(null)
 
