@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "npx playwright install-deps"
+    "setup": "npx playwright install-deps"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.6.0",
