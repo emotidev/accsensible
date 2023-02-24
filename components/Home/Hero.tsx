@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 
 import { createStyles, Title, Text, Container } from '@mantine/core'
@@ -21,7 +23,10 @@ const useStyles = createStyles((theme) => ({
 
   dots: {
     position: 'absolute',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+    color:
+      theme.colorScheme === 'dark'
+        ? theme.colors.dark[5]
+        : theme.colors.gray[1],
 
     '@media (max-width: 755px)': {
       display: 'none'
@@ -49,7 +54,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   highlight: {
-    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6]
+    color:
+      theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6]
   },
 
   description: {
@@ -62,7 +68,7 @@ const useStyles = createStyles((theme) => ({
   }
 }))
 
-export default function Hero () {
+export default function Hero() {
   const { classes } = useStyles()
 
   return (
@@ -75,7 +81,7 @@ export default function Hero () {
       <div className={classes.inner}>
         <Title className={classes.title}>
           <Text component="span" className={classes.highlight} inherit>
-          Accessible
+            Accessible
           </Text>{' '}
           Web Pages But{' '}
           <Text component="span" className={classes.highlight} inherit>
@@ -96,11 +102,11 @@ export default function Hero () {
 }
 
 interface DotsProps extends React.ComponentPropsWithoutRef<'svg'> {
-  size?: number;
-  radius?: number;
+  size?: number
+  radius?: number
 }
 
-function Dots ({ size = 185, radius = 2.5, ...others }: DotsProps) {
+function Dots({ size = 185, radius = 2.5, ...others }: DotsProps) {
   return (
     <svg
       aria-hidden
@@ -109,8 +115,7 @@ function Dots ({ size = 185, radius = 2.5, ...others }: DotsProps) {
       viewBox="0 0 185 185"
       width={size}
       height={size}
-      {...others}
-    >
+      {...others}>
       <rect width="5" height="5" rx={radius} />
       <rect width="5" height="5" x="60" rx={radius} />
       <rect width="5" height="5" x="120" rx={radius} />

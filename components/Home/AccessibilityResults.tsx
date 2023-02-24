@@ -1,59 +1,88 @@
 import * as React from 'react'
 
-import { AnalyzerResult } from 'hint'
+import axe from 'axe-core'
 
-import { useState } from 'react'
-import { createStyles, Table, ScrollArea, Container, Text } from '@mantine/core'
-import Link from 'next/link'
-
-export default function AccessibilityResults (results: AnalyzerResult) {
-  const { classes, cx } = useStyles()
-  const [scrolled, setScrolled] = useState(false)
-
-  const rows = results.problems.map((problem, index) => (
-    <tr key={index}>
-      <td><Text size="md" sx={{ maxWidth: '30vw' }}>{problem.message}</Text></td>
-      <td><Text size="md">{problem.documentation ? (<Link href={problem.documentation[0].link}>{problem.documentation[0].text}</Link>) : '-'}</Text></td>
-    </tr>
-  ))
-
+export default function AccessibilityResults({
+  results
+}: {
+  results: axe.AxeResults
+}) {
   return (
-    <Container sx={{ minWidth: '80vw', display: 'flex', alignItems: 'end', justifyContent: 'center' }}>
-    <ScrollArea sx={{ height: '50vh' }} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-      <Table sx={{ maxWidth: 'max-content' }}>
-        <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
-          <tr>
-            <th><Text size="xl">Problem</Text></th>
-            <th><Text size="xl">Learn more</Text></th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </Table>
-    </ScrollArea>
-    </Container>
+    <div className="flex flex-col items-center justify-center w-full p-4 xs:p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+      <details className="w-full flex justify-evenly">
+        <summary className="max-w-full flex">
+          <h2 className="text-center !max-w-prose !mb-8">
+            {results.violations.length} accessibility issues found {'('}click to
+            view {')'}
+          </h2>
+        </summary>
+        <ul className="flex flex-col w-full mt-4 space-y-4">
+          {results.violations.map((violation) => (
+            <div key={violation.id}>
+              <h3 className="text-lg font-bold">{violation.description}</h3>
+              <ul className="flex flex-col w-full mt-2 space-y-2">
+                {violation.nodes.map((node) => (
+                  <li key={node.html}>
+                    <p className="text-sm">{node.failureSummary}</p>
+                    <pre className="w-full p-4 mt-2 text-sm bg-slate-3 rounded-md">
+                      {node.html}
+                    </pre>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </ul>
+      </details>
+      <details className="w-full flex justify-evenly">
+        <summary className="max-w-full flex">
+          <h2 className="text-center !max-w-prose !mb-8">
+            {results.incomplete.length} incomplete issues found {'('}click to
+            view {')'}
+          </h2>
+        </summary>
+        <ul className="flex flex-col w-full mt-4 space-y-4">
+          {results.incomplete.map((incomplete) => (
+            <div key={incomplete.id}>
+              <h3 className="text-lg font-bold">{incomplete.description}</h3>
+              <ul className="flex flex-col w-full mt-2 space-y-2">
+                {incomplete.nodes.map((node) => (
+                  <li key={node.html}>
+                    <p className="text-sm">{node.failureSummary}</p>
+                    <pre className="w-full p-4 mt-2 text-sm bg-slate-3 rounded-md">
+                      {node.html}
+                    </pre>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </ul>
+      </details>
+      <details className="w-full flex justify-evenly">
+        <summary className="max-w-full flex">
+          <h2 className="text-center !max-w-prose !mb-8">
+            {results.passes.length} passes found {'('}click to view {')'}
+          </h2>
+        </summary>
+        <ul className="flex flex-col w-full mt-4 space-y-4">
+          {results.passes.map((pass) => (
+            <div key={pass.id}>
+              <h3 className="text-lg font-bold">{pass.description}</h3>
+              <ul className="flex flex-col w-full mt-2 space-y-2">
+                {pass.nodes.map((node) => (
+                  <li key={node.html}>
+                    <p className="text-sm">{node.failureSummary}</p>
+                    <pre className="w-full p-4 mt-2 text-sm bg-slate-3 rounded-md">
+                      {node.html}
+                    </pre>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </ul>
+      </details>
+    </div>
   )
 }
-
-const useStyles = createStyles((theme) => ({
-  header: {
-    position: 'sticky',
-    top: 0,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-    transition: 'box-shadow 150ms ease',
-
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      left: 0,
-      right: 0,
-      bottom: 0,
-      borderBottom: `1px solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[2]
-      }`
-    }
-  },
-
-  scrolled: {
-    boxShadow: theme.shadows.sm
-  }
-}))

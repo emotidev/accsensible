@@ -1,25 +1,10 @@
 // @ts-check
-const withPlugins = require('next-compose-plugins')
-const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/
-})
+
+const { withAxiom } = require('next-axiom')
 
 /** @type {import('next').NextConfig} */
-module.exports = withPlugins([withMDX], ({
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { tsconfigPath: './tsconfig.json' },
-  trailingSlash: false,
-  env: {},
-  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
-  compress: true,
-  poweredByHeader: false,
-  images: {
-    formats: ['image/webp']
-  },
-  productionBrowserSourceMaps: true,
-  swcMinify: true,
+module.exports = withAxiom({
   experimental: {
-    optimisticClientCache: true,
-    legacyBrowsers: true
+    appDir: true
   }
-}))
+})
