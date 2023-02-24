@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/krshkun/accsensible/compare/v0.2.5...v0.3.0) (2023-02-24)
+
+
+### Features
+
+* updated ui ([88e42b2](https://github.com/krshkun/accsensible/commit/88e42b2f3d3bf0f1bbe5cc3796908b5426c81c99))
+
+
+
 ## [0.2.5](https://github.com/krshkun/accsensible/compare/v0.2.4...v0.2.5) (2022-12-17)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * config resource not found ([6f7a2c8](https://github.com/krshkun/accsensible/commit/6f7a2c8544281902daf5a06f5e4f006d190ed452))
-
-
-
-# [0.2.0](https://github.com/krshkun/accsensible/compare/v0.1.0...v0.2.0) (2022-12-17)
-
-
-### Features
-
-* api route for checking ([f3a748f](https://github.com/krshkun/accsensible/commit/f3a748f9d6d8b2ca8c443916378380d0471c9084))
 
 
 
