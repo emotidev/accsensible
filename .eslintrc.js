@@ -18,11 +18,10 @@ module.exports = {
     },
     ecmaVersion: 'latest'
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
-  rules: {},
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    'space-before-function-paren': ['error', 'never']
+  },
   settings: {
     react: {
       version: 'detect'
