@@ -1,4 +1,3 @@
-import Chromium from 'chrome-aws-lambda'
 import AxePuppeteer from '@axe-core/puppeteer'
 import { NextApiRequest, NextApiResponse } from 'next'
 
@@ -10,13 +9,14 @@ export default async function check(req: NextApiRequest, res: NextApiResponse) {
   let puppeteer
 
   if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
+    const { executablePath, args } = (await import('chrome-aws-lambda')).default
     chrome = {
-      executablePath: await Chromium.executablePath,
-      args: Chromium.args
+      executablePath: await executablePath,
+      args
     }
-    puppeteer = await import('puppeteer-core')
+    puppeteer = (await import('puppeteer-core')).default
   } else {
-    puppeteer = await import('puppeteer')
+    puppeteer = (await import('puppeteer')).default
   }
 
   const { url } = req.query
