@@ -11,10 +11,12 @@ Closes: # <!-- issue number that will be closed through this PR -->
 <!-- Describe how have you verified the changes made -->
 
 ## Checklist
+
 <!--
 Example how to mark a checkbox:-
 - [x] I have performed a self-review of my own code.
 -->
+
 - [ ] I have performed a self-review of my own code.
 - [ ] I have commented on my code, particularly wherever it was hard to understand.
 - [ ] I have made corresponding changes to the documentation.

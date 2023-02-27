@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import axe from 'axe-core'
 
-export default function AccessibilityResults ({
+export default function AccessibilityResults({
   results
 }: {
   results: axe.AxeResults
