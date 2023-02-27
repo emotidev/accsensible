@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/krshkun/accsensible/compare/v0.3.0...v0.3.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* playwright won't deploy on vercel ([e4fa4db](https://github.com/krshkun/accsensible/commit/e4fa4db0655da017b60c9c96ae6321fa45e9817f))
+
+
+
 # [0.3.0](https://github.com/krshkun/accsensible/compare/v0.2.5...v0.3.0) (2023-02-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove unnecessary dependencies ([f6c187c](https://github.com/krshkun/accsensible/commit/f6c187c4215c8ecafa651917b6f6f67b09cb6510))
-
-
-
-## [0.2.2](https://github.com/krshkun/accsensible/compare/v0.2.0...v0.2.2) (2022-12-17)
-
-
-### Bug Fixes
-
-* config resource not found ([6f7a2c8](https://github.com/krshkun/accsensible/commit/6f7a2c8544281902daf5a06f5e4f006d190ed452))
 
 
 
