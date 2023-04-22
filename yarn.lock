@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@axe-core/puppeteer@^4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@axe-core/puppeteer/-/puppeteer-4.6.0.tgz#fe49def8f4ef6c19485f6569f1bc7a83a281daba"
-  integrity sha512-imLNUPKUtlD3O098GcgttHQWIcG6IlPVYOLCB+TT6vE/QC9HdVoDXiiZl0HybxkEvVnIWgrGSgBLSInsGWuHyw==
+"@axe-core/puppeteer@^4.6.1":
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/@axe-core/puppeteer/-/puppeteer-4.6.1.tgz#7f1ed892d34498e8af3d0b2f6a9d78d571bfe7b9"
+  integrity sha512-l440F67m/XlDgaWA4jbSXYxmwC0Di6MqVU6ns+HROWS8/+RuevppvyBveRmh+oC+OMgNF+mcF/ayzCEjc24pcQ==
   dependencies:
-    axe-core "^4.6.1"
+    axe-core "^4.6.3"
 
 "@babel/code-frame@^7.0.0":
   version "7.18.6"
@@ -931,10 +931,10 @@ autoprefixer@^10.4.13:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axe-core@^4.6.1:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.3.tgz#fc0db6fdb65cc7a80ccf85286d91d64ababa3ece"
-  integrity sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==
+axe-core@^4.6.3:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.7.0.tgz#34ba5a48a8b564f67e103f0aa5768d76e15bbbbf"
+  integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
 
 balanced-match@^1.0.0:
   version "1.0.2"
